@@ -1,0 +1,55 @@
+# =========================
+# General
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+
+# =========================
+# Node / Angular
+# =========================
+node_modules/
+dist/
+.angular/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files (opcional, recomendado)
+.env
+.env.*
+
+# =========================
+# .NET / Visual Studio
+# =========================
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+*.sln.iml
+
+# ASP.NET logs
+Logs/
+
+# =========================
+# Coverage / Tests
+# =========================
+coverage/
+TestResults/
+
+# =========================
+# Publish artifacts
+# =========================
+publish/
