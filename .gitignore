@@ -27,8 +27,6 @@ pnpm-debug.log*
 # =========================
 # .NET / Visual Studio
 # =========================
-bin/
-obj/
 .vs/
 .vscode/
 .idea/
@@ -36,6 +34,9 @@ obj/
 *.suo
 *.userosscache
 *.sln.docstates
+**/bin/
+**/obj/
+*.csproj.user
 
 # Rider
 *.sln.iml
