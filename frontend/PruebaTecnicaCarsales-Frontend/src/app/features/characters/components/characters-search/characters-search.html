@@ -1,0 +1,25 @@
+<div class="search">
+  <div class="search-row">
+    <span class="search-icon" aria-hidden="true">🔎</span>
+
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Search by name..."
+      [value]="value()"
+      (input)="onInput($event)"
+      (keydown.enter)="onEnter()"
+      [disabled]="disabled()"
+    />
+  </div>
+
+  <div class="search-actions">
+    <button class="btn" (click)="onSearchClick()" [disabled]="disabled()">
+      Search
+    </button>
+
+    <button class="btn btn-ghost" (click)="onClearClick()" [disabled]="disabled()">
+      Clear
+    </button>
+  </div>
+</div>

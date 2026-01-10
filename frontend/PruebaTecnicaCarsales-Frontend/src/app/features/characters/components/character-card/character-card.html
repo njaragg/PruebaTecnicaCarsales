@@ -1,0 +1,13 @@
+@let c = character();
+
+<div class="card">
+  <img
+    class="avatar"
+    [src]="c.image"
+    [alt]="c.name"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="name">{{ c.name }}</div>
+  <div class="species">{{ c.species }}</div>
+</div>

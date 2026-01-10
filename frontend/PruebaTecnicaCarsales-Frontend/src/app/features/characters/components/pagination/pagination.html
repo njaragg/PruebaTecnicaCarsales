@@ -1,0 +1,11 @@
+<div class="pagination">
+  <button class="btn btn-ghost" (click)="onPrev()" [disabled]="!canPrev()">
+    &lt; Prev
+  </button>
+
+  <div class="page-info">Page {{ page() }} of {{ pages() }}</div>
+
+  <button class="btn btn-ghost" (click)="onNext()" [disabled]="!canNext()">
+    Next &gt;
+  </button>
+</div>

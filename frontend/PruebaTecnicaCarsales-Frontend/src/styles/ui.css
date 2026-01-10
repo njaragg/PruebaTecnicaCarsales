@@ -1,0 +1,75 @@
+/* ==========================================================================
+   UI global reutilizable styles
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --ui-text: #e8eef6;
+  --ui-muted: rgba(232, 238, 246, 0.60);
+
+  --ui-border: rgba(255, 255, 255, 0.12);
+  --ui-border-soft: rgba(255, 255, 255, 0.10);
+
+  --ui-surface: rgba(255, 255, 255, 0.08);
+  --ui-surface-hover: rgba(255, 255, 255, 0.12);
+
+  --ui-accent: rgba(169, 255, 153, 0.95);
+  --ui-accent-border: rgba(169, 255, 153, 0.30);
+  --ui-accent-surface: rgba(169, 255, 153, 0.08);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--ui-surface-hover);
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--ui-accent-border);
+  color: var(--ui-accent);
+}
+
+.btn-ghost:hover {
+  background: var(--ui-accent-surface);
+}
+
+.btn-small {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 9px;
+}
+
+/* ===== Chip ===== */
+.chip {
+  height: auto;
+  min-height: 32px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-border-soft);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(232, 238, 246, 0.85);
+  cursor: pointer;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}

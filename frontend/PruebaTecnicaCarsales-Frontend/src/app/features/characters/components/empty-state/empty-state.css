@@ -1,0 +1,23 @@
+.empty {
+  padding: 32px 14px; /* mobile */
+  text-align: center;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.empty-title {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.empty-sub {
+  font-size: 14px;
+  color: rgba(232, 238, 246, 0.60);
+}
+
+@media (min-width: 621px) {
+  .empty {
+    padding: 40px 16px;
+  }
+}

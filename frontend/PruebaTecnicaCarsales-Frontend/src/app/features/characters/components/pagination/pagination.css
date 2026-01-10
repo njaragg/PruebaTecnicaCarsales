@@ -1,0 +1,24 @@
+.pagination {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-info {
+  opacity: 0.85;
+  font-size: 14px;
+  min-width: 110px;
+  text-align: center;
+  color: #e8eef6;
+
+}
+
+@media (min-width: 621px) {
+  .pagination {
+    gap: 14px;
+  }
+}
+

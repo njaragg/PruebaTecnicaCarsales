@@ -1,0 +1,5 @@
+<div class="grid">
+  @for (c of characters(); track c.id) {
+    <app-character-card [character]="c" />
+  }
+</div>

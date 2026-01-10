@@ -1,0 +1,80 @@
+/* Search wrapper: mobile en columna */
+.search {
+  display: flex;
+  flex-direction: column; /* ✅ mobile: input arriba, botones abajo */
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+  min-width: 0; /* ✅ clave en flex */
+}
+
+/* Fila superior: icon + input */
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0; /* ✅ permite encoger hijos */
+}
+
+.search-icon {
+  opacity: 0.75;
+  font-size: 16px;
+  flex: 0 0 auto;
+}
+
+.search-input {
+  flex: 1 1 auto;
+  min-width: 0; /* ✅ clave: input puede encogerse */
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e8eef6;
+  padding: 0 12px;
+  outline: none;
+  transition: border 160ms ease, box-shadow 160ms ease;
+}
+
+.search-input::placeholder {
+  color: rgba(232, 238, 246, 0.45);
+}
+
+.search-input:focus {
+  border-color: rgba(169, 255, 153, 0.45);
+  box-shadow: 0 0 0 4px rgba(169, 255, 153, 0.10);
+}
+
+/* Acciones: botones (mobile en columna) */
+.search-actions {
+  display: flex;
+  flex-direction: column; /* ✅ mobile: vertical */
+  gap: 10px;
+}
+
+.search-actions .btn {
+  width: 100%; /* ✅ ocupa todo el ancho en mobile */
+}
+
+/* >= 621px: search en fila + botones horizontales */
+@media (min-width: 621px) {
+  .search {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    min-width: 320px;
+  }
+
+  .search-row {
+    flex: 1;
+  }
+
+  .search-actions {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .search-actions .btn {
+    width: auto;
+  }
+}

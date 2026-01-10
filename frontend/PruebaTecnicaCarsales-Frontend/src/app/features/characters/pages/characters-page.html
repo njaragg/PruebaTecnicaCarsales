@@ -1,0 +1,34 @@
+<div class="page">
+  <div class="panel">
+    <!-- Controls -->
+    <div class="controls">
+      <app-characters-search
+          [value]="searchText()"
+          [disabled]="isLoading()"
+          (valueChange)="searchText.set($event)"
+          (search)="onSearch()"
+          (clear)="onClear()">
+        </app-characters-search>
+
+      <!-- Boton para testear estados visuales -->
+      <button class="chip" (click)="simulateLoading()">Loading simulate</button>
+    </div>
+
+
+    <!-- Content -->
+    @if (isLoading()) {
+      <app-skeleton-grid [count]="6" />
+    } @else {
+    @if (filteredCharacters().length === 0) {
+    <app-empty-state />
+    } @else {
+    <app-characters-grid [characters]="filteredCharacters()" />
+    }
+    }
+
+    <!-- Pagination -->
+    <app-pagination [page]="page()" [pages]="pages()" [canPrev]="canPrev()" [canNext]="canNext()" (prev)="prevPage()"
+      (next)="nextPage()" />
+
+  </div>
+</div>

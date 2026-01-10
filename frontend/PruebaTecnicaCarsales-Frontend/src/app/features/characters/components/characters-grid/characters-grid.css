@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  flex-direction: column; /* mobile: 1 columna */
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.grid > * {
+  width: 100%;
+  min-width: 0;
+}
+
+/* >= 621px: 2 columnas */
+@media (min-width: 621px) {
+  .grid {
+    flex-direction: row;     
+    flex-wrap: wrap;        
+  }
+
+  .grid > * {
+    flex: 0 0 calc((100% - 16px) / 2); /* 2 columnas, 1 gap */
+  }
+}
+
+/* >= 981px: 3 columnas */
+@media (min-width: 981px) {
+  .grid > * {
+    flex-basis: calc((100% - 32px) / 3); /* 3 columnas, 2 gaps */
+  }
+}
