@@ -1,0 +1,30 @@
+<div class="page">
+  <section class="home">
+    <nav class="tabs" aria-label="Home tabs">
+      <button
+        type="button"
+        class="btn"
+        [class.btn-ghost]="activeTab() === 'characters'"
+        (click)="setTab('characters')"
+      >
+        Characters
+      </button>
+      <button
+        type="button"
+        class="btn"
+        [class.btn-ghost]="activeTab() === 'episodes'"
+        (click)="setTab('episodes')"
+      >
+        Episodes
+      </button>
+    </nav>
+
+    <div class="tab-content">
+    @if (activeTab() === 'characters') {
+      <app-characters-page />
+    } @else {
+      <app-episodes-page />
+    }
+    </div>
+  </section>
+</div>

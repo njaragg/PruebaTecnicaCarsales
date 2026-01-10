@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CharactersPage } from './features/characters/pages/characters-page';
+import { HomePage } from './features/home/pages/home-page';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CharactersPage],
+  imports: [HomePage],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

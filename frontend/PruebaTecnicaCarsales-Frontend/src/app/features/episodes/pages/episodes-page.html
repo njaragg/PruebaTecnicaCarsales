@@ -1,0 +1,47 @@
+<div class="panel">
+  <section class="episodes">
+    <div class="episodes-header">
+      <h2 class="title">Episodes</h2>
+      <div class="pager">
+        <button class="btn btn-ghost" (click)="prevPage()" [disabled]="!canPrev()">
+          &lt; Prev
+        </button>
+        <span class="page-info">Page {{ page() }} of {{ pages() }}</span>
+        <button class="btn btn-ghost" (click)="nextPage()" [disabled]="!canNext()">
+          Next &gt;
+        </button>
+      </div>
+    </div>
+
+    @if (isLoading()) {
+      <div class="state">Cargando...</div>
+    } @else if (errorMessage()) {
+      <div class="state error">{{ errorMessage() }}</div>
+    } @else if (episodes().length === 0) {
+      <div class="state">Sin episodios para mostrar.</div>
+    } @else {
+      <div class="table-wrap">
+        <table class="episodes-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Fecha</th>
+              <th>Codigo</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (episode of episodes(); track episode.id) {
+              <tr>
+                <td>{{ episode.id }}</td>
+                <td>{{ episode.name }}</td>
+                <td>{{ episode.airDate }}</td>
+                <td>{{ episode.episodeCode }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </section>
+</div>
